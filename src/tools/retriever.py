@@ -14,6 +14,6 @@ db = FAISS.load_local(
 def retrieve(query, k=3):
     results = db.similarity_search(query, k=k)
 
-    return "\n\n".join(
-        [doc.page_content for doc in results]
-    )
+    return [
+    doc.page_content
+    for doc in results]
