@@ -37,7 +37,7 @@ Question:
 {state['query']}
 
 Context:
-{state['validated_context']}
+{state['validated_context'][:3000]}
 """
         )
     ]
