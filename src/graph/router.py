@@ -26,7 +26,11 @@ def route_query(state):
              ["trend","consistent","season"]):
 
         state["route"] = "trend"
+    elif any(word in query for word in
+        ["dream11", "fantasy", "captain", "vice captain"]):
 
+        state["route"] = "dream11"
+    
     elif any(word in query for word in
              ["form","dream11","captain"]):
 
@@ -36,7 +40,7 @@ def route_query(state):
              ["record","highest","most"]):
 
         state["route"] = "records"
-
+    
     else:
 
         state["route"] = "team"
